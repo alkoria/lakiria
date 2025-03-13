@@ -44,5 +44,5 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git remote set-url origin git@github.com:alkoria/alkiria.git
+          git remote set-url origin git@github.com:alkoria/lakiria.git
           npx gh-pages -d dist
