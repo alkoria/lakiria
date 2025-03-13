@@ -2,6 +2,7 @@
   "name": "lakiria",
   "main": "expo-router/entry",
   "version": "1.0.0",
+  "homepage": "https://alkoria.github.io/lakiria",
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
