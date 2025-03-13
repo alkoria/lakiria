@@ -31,7 +31,7 @@ export default function HomeScreen() {
               web: 'F12'
             })}
           </ThemedText>{' '}
-          i`am developer page.
+          I am developer page.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
