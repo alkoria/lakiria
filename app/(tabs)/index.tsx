@@ -11,7 +11,7 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#A3A1DC', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={require('@/assets/images/lakiria-logo-red.png')}
+          source={require('@/assets/images/lakiria-logo-blue.png')}
           style={styles.reactLogo}
         />
       }>
@@ -48,13 +48,13 @@ const styles = StyleSheet.create({
   },
 
   reactLogo: {
-    height: 178,
-    width: 290,
+    height: '100%',
+    width: '100%',
     bottom: 0,
     //left: 0,
     alignSelf: 'center',
     position: 'absolute',
-    borderRadius: 100, // Закругление углов
+    borderRadius: 0, // Закругление углов
     overflow: 'hidden', // Скрываем лишнее за пределами закругления
     backgroundColor: '#A3A1DC', // Фон контейнера (опционально)
     ...Platform.select({
