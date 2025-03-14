@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { View, Image, StyleSheet, Platform } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -10,10 +10,13 @@ export default function HomeScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A3A1DC', dark: '#1D3D47' }}
       headerImage={
+        <View style={styles.imageContainer}>
         <Image
           source={require('@/assets/images/lakiria-logo-blue.png')}
           style={styles.reactLogo}
+          resizeMode="cover"
         />
+      </View>
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome to lakiria!</ThemedText>
@@ -47,26 +50,51 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
 
-  reactLogo: {
-    height: '100%',
+  imageContainer: {
+    flex: 1, // Занимает все доступное пространство
+    height: '50%',
     width: '100%',
-    bottom: 0,
-    //left: 0,
-    alignSelf: 'center',
-    position: 'absolute',
-    borderRadius: 0, // Закругление углов
-    overflow: 'hidden', // Скрываем лишнее за пределами закругления
-    backgroundColor: '#A3A1DC', // Фон контейнера (опционально)
+    borderRadius: 16,
+    overflow: 'hidden',
+    backgroundColor: '#A3A1DC',
     ...Platform.select({
       ios: {
-        shadowColor: '#000', // Цвет тени для iOS
-        shadowOffset: { width: 0, height: 4 }, // Размер и направление тени
-        shadowOpacity: 0.2, // Прозрачность тени
-        shadowRadius: 4, // Размытие тени
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.2,
+        shadowRadius: 4,
       },
       android: {
-        elevation: 8, // Высота тени для Android
+        elevation: 8,
       },
     }),
   },
+  reactLogo: {
+    height: '100%',
+    width: '100%',
+    resizeMode: 'cover',
+  },
+  ////////
+  // reactLogo: {
+  //   height: '100%',
+  //   width: '100%',
+  //   bottom: 0,
+  //   //left: 0,
+  //   alignSelf: 'center',
+  //   position: 'absolute',
+  //   borderRadius: 0, // Закругление углов
+  //   overflow: 'hidden', // Скрываем лишнее за пределами закругления
+  //   backgroundColor: '#A3A1DC', // Фон контейнера (опционально)
+  //   ...Platform.select({
+  //     ios: {
+  //       shadowColor: '#000', // Цвет тени для iOS
+  //       shadowOffset: { width: 0, height: 4 }, // Размер и направление тени
+  //       shadowOpacity: 0.2, // Прозрачность тени
+  //       shadowRadius: 4, // Размытие тени
+  //     },
+  //     android: {
+  //       elevation: 8, // Высота тени для Android
+  //     },
+  //   }),
+  // },
 });
