@@ -20,73 +20,70 @@ export default function TabTwoScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">Содержание</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      <ThemedText>Весь список:</ThemedText>
+      <Collapsible title="Пункт №1">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+          Текст 0{' '}
+          <ThemedText type="defaultSemiBold">Текст 1</ThemedText> и/или {' '}
+          <ThemedText type="defaultSemiBold">Текст 2</ThemedText>
         </ThemedText>
         <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
+        Текст 3 <ThemedText type="defaultSemiBold">Текст 4</ThemedText>{' '}
+        Текст 5
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
+        <ExternalLink href="https://lakiria.ru">
+          <ThemedText type="link">Назад на главную</ThemedText>
         </ExternalLink>
       </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
+      <Collapsible title="Пункт №2">
         <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
+        Текст 6{' '}
+          <ThemedText type="defaultSemiBold">Текст 7</ThemedText> Текст 8
         </ThemedText>
       </Collapsible>
-      <Collapsible title="Images">
+      <Collapsible title="Пункт №3">
         <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
+        Текст 9 <ThemedText type="defaultSemiBold">Текст 10</ThemedText> Текст 11{' '}
+          <ThemedText type="defaultSemiBold">Текст 12</ThemedText> Текст 13
         </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
+        <Image source={require('@/assets/images/lakiria-logo-white.png')} style={{ alignSelf: 'center',height: 178, width: 290 }} />
+        <ExternalLink href="https://lakiria.ru">
+          <ThemedText type="link">Новое окно</ThemedText>
         </ExternalLink>
       </Collapsible>
-      <Collapsible title="Custom fonts">
+      <Collapsible title="Пункт №4">
         <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
+        Текст <ThemedText type="defaultSemiBold">Текст 13</ThemedText> Текст{' '}
           <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
+          Текст 14
           </ThemedText>
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
-          <ThemedText type="link">Learn more</ThemedText>
+        <ExternalLink href="https://lakiria.ru">
+          <ThemedText type="link">Текст 15</ThemedText>
         </ExternalLink>
       </Collapsible>
-      <Collapsible title="Light and dark mode components">
+      <Collapsible title="Пункт №5">
         <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user's current color scheme is, and so you can adjust UI colors accordingly.
+        Текст 16 {' '}
+          <ThemedText type="defaultSemiBold">Текст</ThemedText> Текст
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
+        <ExternalLink href="https://lakiria.ru">
           <ThemedText type="link">Learn more</ThemedText>
         </ExternalLink>
       </Collapsible>
-      <Collapsible title="Animations">
+      <Collapsible title="Пункт №6">
         <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText>{' '}
-          library to create a waving hand animation.
+        Текст{' '}
+          <ThemedText type="defaultSemiBold">Текст</ThemedText> Текст <ThemedText type="defaultSemiBold">Текст</ThemedText>{' '}
+          Текст
         </ThemedText>
         {Platform.select({
           ios: (
             <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
+              Текст <ThemedText type="defaultSemiBold"></ThemedText>{' '}
+              Текст
             </ThemedText>
           ),
         })}
