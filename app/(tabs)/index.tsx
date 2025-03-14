@@ -21,13 +21,13 @@ export default function HomeScreen() {
       </View>
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome to lakiria!</ThemedText>
+        <ThemedText type="title">Добро пожаловать в гости!</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">lakiria</ThemedText>
+        <ThemedText type="subtitle">########################################</ThemedText>
         <ThemedText>
-          You <ThemedText type="defaultSemiBold">version</ThemedText>{' '}
+          Вы используете <ThemedText type="defaultSemiBold">версию</ThemedText>{' '}
           <ThemedText type="defaultSemiBold">
             {Platform.select({
               ios: 'ios',
