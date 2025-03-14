@@ -8,10 +8,10 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#A3A1DC', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={require('@/assets/images/lakiria-logo-red.png')}
           style={styles.reactLogo}
         />
       }>
@@ -22,16 +22,14 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">lakiria</ThemedText>
         <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">I am homepage</ThemedText>!
-          Press{' '}
+          You <ThemedText type="defaultSemiBold">version</ThemedText>{' '}
           <ThemedText type="defaultSemiBold">
             {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
+              ios: 'ios',
+              android: 'android',
+              web: 'web'
             })}
           </ThemedText>{' '}
-          I am developer page.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -48,11 +46,27 @@ const styles = StyleSheet.create({
     gap: 8,
     marginBottom: 8,
   },
+
   reactLogo: {
     height: 178,
     width: 290,
     bottom: 0,
-    left: 0,
+    //left: 0,
+    alignSelf: 'center',
     position: 'absolute',
+    borderRadius: 100, // Закругление углов
+    overflow: 'hidden', // Скрываем лишнее за пределами закругления
+    backgroundColor: '#A3A1DC', // Фон контейнера (опционально)
+    ...Platform.select({
+      ios: {
+        shadowColor: '#000', // Цвет тени для iOS
+        shadowOffset: { width: 0, height: 4 }, // Размер и направление тени
+        shadowOpacity: 0.2, // Прозрачность тени
+        shadowRadius: 4, // Размытие тени
+      },
+      android: {
+        elevation: 8, // Высота тени для Android
+      },
+    }),
   },
 });
