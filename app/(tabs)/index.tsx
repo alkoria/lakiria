@@ -12,10 +12,12 @@ export default function HomeScreen() {
       headerImage={
         <View style={styles.imageContainer}>
         <Image
-          source={require('@/assets/images/lakiria-logo-blue.png')}
+          source={require('@/assets/images/lakiria-logo-blue-rm.png')}
           style={styles.reactLogo}
-          resizeMode="cover"
+          //resizeMode="cover"
+          resizeMode="stretch"
         />
+
       </View>
       }>
       <ThemedView style={styles.titleContainer}>
@@ -52,9 +54,12 @@ const styles = StyleSheet.create({
 
   imageContainer: {
     flex: 1, // Занимает все доступное пространство
-    height: '50%',
+    height: '100%',
+    //position: 'absolute',
+    opacity: 0.8, // Прозрачность всего элемента (80% непрозрачности)
     width: '100%',
-    borderRadius: 16,
+    alignSelf: 'center',
+    borderRadius: 0,
     overflow: 'hidden',
     backgroundColor: '#A3A1DC',
     ...Platform.select({
