@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform } from "react-native";
+import { View, Image, StyleSheet, Platform } from "react-native";
 
 import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
@@ -34,12 +34,14 @@ export default function HomeScreen() {
     >
       <ThemedView style={[styles.titleContainer]}>
         <ThemedText type="title"> </ThemedText>
-        <HelloWave />
+        {/* <HelloWave /> */}
       </ThemedView>
       <ThemedView style={[styles.centerContainer, styles.stepContainer]}>
-        <ThemedText type="subtitle">---------------</ThemedText>
+      <ThemedText type="subtitle">-----------------------------</ThemedText>
+        <HelloWave />
+        <ThemedText type="subtitle">-----------------------------</ThemedText>
         <PlatformText>Вы используете версию</PlatformText>
-        <ThemedText type="subtitle">---------------</ThemedText>
+        <ThemedText type="subtitle">-----------------------------</ThemedText>
       </ThemedView>
     </ParallaxScrollView>
   );
@@ -56,7 +58,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   centerContainer: {
-    alignItems: "center",
+    alignItems: "center", // Центрирует по горизонтали
+    justifyContent: "center", // Опционально: центрирует по вертикали
   },
   container: {
     flex: 1,
@@ -65,7 +68,7 @@ const styles = StyleSheet.create({
     opacity: 0.8,
     overflow: "hidden",
     backgroundColor: "#A3A1DC",
-    borderRadius: 16,
+    borderRadius: 0,
     ...Platform.select({
       ios: {
         shadowColor: "#000",
