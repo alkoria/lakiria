@@ -20,13 +20,13 @@ export default function TabLayout() {
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: "absolute",
           },
           default: {},
         }),
       }}
     >
+      {/* Остальные табы */}
       <Tabs.Screen
         name="index"
         options={{
@@ -36,15 +36,6 @@ export default function TabLayout() {
           ),
         }}
       />
-      {/* <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Содержание',
-           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-          // tabBarIcon: ({ color }) => <AntDesign  name="menuunfold" size={24} color="black" />
-        }}
-      /> */}
-
       <Tabs.Screen
         name="explore"
         options={{
