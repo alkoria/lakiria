@@ -1,41 +1,44 @@
-import { View, Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
+function PlatformText({ children }) {
+  return (
+    <ThemedText>
+      {children}{' '}
+      <ThemedText type="defaultSemiBold">
+        {Platform.select({
+          ios: 'iOS',
+          android: 'Android',
+          web: 'Web',
+        })}
+      </ThemedText>
+    </ThemedText>
+  );
+}
+
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A3A1DC', dark: '#1D3D47' }}
       headerImage={
-        <View style={styles.imageContainer}>
         <Image
           source={require('@/assets/images/lakiria-logo-blue-rm.png')}
-          style={styles.reactLogo}
-          //resizeMode="cover"
+          style={[styles.container, styles.reactLogo]}
           resizeMode="stretch"
         />
-
-      </View>
       }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Добро пожаловать в гости!</ThemedText>
+      <ThemedView style={[styles.titleContainer]}>
+        <ThemedText type="title">                         </ThemedText>
         <HelloWave />
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">########################################</ThemedText>
-        <ThemedText>
-          Вы используете <ThemedText type="defaultSemiBold">версию</ThemedText>{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'ios',
-              android: 'android',
-              web: 'web'
-            })}
-          </ThemedText>{' '}
-        </ThemedText>
+      <ThemedView style={[styles.centerContainer, styles.stepContainer]}>
+        <ThemedText type="subtitle">---------------</ThemedText>
+        <PlatformText>Вы используете версию</PlatformText>
+        <ThemedText type="subtitle">---------------</ThemedText>
       </ThemedView>
     </ParallaxScrollView>
   );
@@ -51,17 +54,17 @@ const styles = StyleSheet.create({
     gap: 8,
     marginBottom: 8,
   },
-
-  imageContainer: {
-    flex: 1, // Занимает все доступное пространство
+  centerContainer: {
+    alignItems: 'center',
+  },
+  container: {
+    flex: 1,
     height: '100%',
-    //position: 'absolute',
-    opacity: 0.8, // Прозрачность всего элемента (80% непрозрачности)
     width: '100%',
-    alignSelf: 'center',
-    borderRadius: 0,
+    opacity: 0.8,
     overflow: 'hidden',
     backgroundColor: '#A3A1DC',
+    borderRadius: 16,
     ...Platform.select({
       ios: {
         shadowColor: '#000',
@@ -75,31 +78,6 @@ const styles = StyleSheet.create({
     }),
   },
   reactLogo: {
-    height: '100%',
-    width: '100%',
-    resizeMode: 'cover',
+    //resizeMode: 'cover',
   },
-  ////////
-  // reactLogo: {
-  //   height: '100%',
-  //   width: '100%',
-  //   bottom: 0,
-  //   //left: 0,
-  //   alignSelf: 'center',
-  //   position: 'absolute',
-  //   borderRadius: 0, // Закругление углов
-  //   overflow: 'hidden', // Скрываем лишнее за пределами закругления
-  //   backgroundColor: '#A3A1DC', // Фон контейнера (опционально)
-  //   ...Platform.select({
-  //     ios: {
-  //       shadowColor: '#000', // Цвет тени для iOS
-  //       shadowOffset: { width: 0, height: 4 }, // Размер и направление тени
-  //       shadowOpacity: 0.2, // Прозрачность тени
-  //       shadowRadius: 4, // Размытие тени
-  //     },
-  //     android: {
-  //       elevation: 8, // Высота тени для Android
-  //     },
-  //   }),
-  // },
 });
