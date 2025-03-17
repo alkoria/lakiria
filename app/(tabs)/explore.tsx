@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     opacity: 0.8,
     overflow: "hidden",
     backgroundColor: "#A3A1DC",
-    borderRadius: 16,
+    borderRadius: 0,
     ...Platform.select({
       ios: {
         shadowColor: "#000",
