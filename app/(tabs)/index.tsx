@@ -1,19 +1,19 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform } from "react-native";
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import { HelloWave } from "@/components/HelloWave";
+import ParallaxScrollView from "@/components/ParallaxScrollView";
+import { ThemedText } from "@/components/ThemedText";
+import { ThemedView } from "@/components/ThemedView";
 
 function PlatformText({ children }) {
   return (
     <ThemedText>
-      {children}{' '}
+      {children}{" "}
       <ThemedText type="defaultSemiBold">
         {Platform.select({
-          ios: 'iOS',
-          android: 'Android',
-          web: 'Web',
+          ios: "iOS",
+          android: "Android",
+          web: "Web",
         })}
       </ThemedText>
     </ThemedText>
@@ -23,16 +23,17 @@ function PlatformText({ children }) {
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A3A1DC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: "#A3A1DC", dark: "#1D3D47" }}
       headerImage={
         <Image
-          source={require('@/assets/images/lakiria-logo-blue-rm.png')}
+          source={require("@/assets/images/lakiria-logo-blue.png")}
           style={[styles.container, styles.reactLogo]}
           resizeMode="stretch"
         />
-      }>
+      }
+    >
       <ThemedView style={[styles.titleContainer]}>
-        <ThemedText type="title">                         </ThemedText>
+        <ThemedText type="title"> </ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={[styles.centerContainer, styles.stepContainer]}>
@@ -46,8 +47,8 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 8,
   },
   stepContainer: {
@@ -55,19 +56,19 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   centerContainer: {
-    alignItems: 'center',
+    alignItems: "center",
   },
   container: {
     flex: 1,
-    height: '100%',
-    width: '100%',
+    height: "100%",
+    width: "100%",
     opacity: 0.8,
-    overflow: 'hidden',
-    backgroundColor: '#A3A1DC',
+    overflow: "hidden",
+    backgroundColor: "#A3A1DC",
     borderRadius: 16,
     ...Platform.select({
       ios: {
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.2,
         shadowRadius: 4,
