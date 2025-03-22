@@ -56,7 +56,12 @@ export default function TabTwoScreen() {
         </ThemedText>
         <Image
           source={require("@/assets/images/lakiria-logo-white.png")}
-          style={{ alignSelf: "center", height: 178, width: 290 }}
+          style={{
+            resizeMode: "stretch",
+            alignSelf: "center",
+            height: 178,
+            width: 290,
+          }}
         />
         <ExternalLink href="https://lakiria.ru">
           <ThemedText type="link">Новое окно</ThemedText>
@@ -106,6 +111,9 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: "row",
     gap: 8,
+  },
+  reactLogo: {
+    //resizeMode: 'cover',
   },
   container: {
     flex: 1,
