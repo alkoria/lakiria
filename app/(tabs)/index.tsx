@@ -6,6 +6,8 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { useColorScheme } from "@/hooks/useColorScheme";
 
+import ThemeToggler from "@/components/ThemeToggler";
+
 function PlatformText({ children }) {
   return (
     <ThemedText>
@@ -23,6 +25,7 @@ function PlatformText({ children }) {
 
 export default function HomeScreen() {
   const colorScheme = useColorScheme();
+  console.log("index color scheme: ", colorScheme);
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A3A1DC", dark: "#1D3D47" }}
@@ -39,10 +42,11 @@ export default function HomeScreen() {
       }
     >
       <ThemedView style={[styles.titleContainer]}>
-        <ThemedText type="title"> </ThemedText>
-        {/* <HelloWave /> */}
+        <ThemedText type="title"></ThemedText>
       </ThemedView>
       <ThemedView style={[styles.centerContainer, styles.stepContainer]}>
+        <ThemedText type="subtitle">-----------------------------</ThemedText>
+        <ThemeToggler />
         <ThemedText type="subtitle">-----------------------------</ThemedText>
         <HelloWave />
         <ThemedText type="subtitle">-----------------------------</ThemedText>
