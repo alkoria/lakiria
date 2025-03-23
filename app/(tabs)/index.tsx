@@ -25,7 +25,6 @@ function PlatformText({ children }) {
 
 export default function HomeScreen() {
   const colorScheme = useColorScheme();
-  console.log("index color scheme: ", colorScheme);
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A3A1DC", dark: "#1D3D47" }}
@@ -45,8 +44,6 @@ export default function HomeScreen() {
         <ThemedText type="title"></ThemedText>
       </ThemedView>
       <ThemedView style={[styles.centerContainer, styles.stepContainer]}>
-        <ThemedText type="subtitle">-----------------------------</ThemedText>
-        <ThemeToggler />
         <ThemedText type="subtitle">-----------------------------</ThemedText>
         <HelloWave />
         <ThemedText type="subtitle">-----------------------------</ThemedText>
