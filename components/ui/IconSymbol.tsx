@@ -1,24 +1,25 @@
 // This file is a fallback for using MaterialIcons on Android and web.
 
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { SymbolWeight } from 'expo-symbols';
-import React from 'react';
-import { OpaqueColorValue, StyleProp, ViewStyle } from 'react-native';
-import AntDesign from '@expo/vector-icons/AntDesign';
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { SymbolWeight } from "expo-symbols";
+import React from "react";
+import { OpaqueColorValue, StyleProp, ViewStyle } from "react-native";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 // Add your SFSymbol to MaterialIcons mappings here.
 const MAPPING = {
   // See MaterialIcons here: https://icons.expo.fyi
   // See SF Symbols in the SF Symbols app on Mac.
-  'house.fill': 'home',
-  'paperplane.fill': 'send',
-  'chevron.left.forwardslash.chevron.right': 'code',
-  'chevron.right': 'chevron-right',
+  "house.fill": "home",
+  "paperplane.fill": "send",
+  "chevron.left.forwardslash.chevron.right": "code",
+  "chevron.right": "chevron-right",
   // Маппинг для AntDesign
-  bars: 'bars', // "bars" из AntDesign
+  bars: "bars", // "bars" из AntDesign
 } as Partial<
   Record<
-    import('expo-symbols').SymbolViewProps['name'],
-    React.ComponentProps<typeof MaterialIcons | typeof AntDesign>['name']
+    import("expo-symbols").SymbolViewProps["name"],
+    React.ComponentProps<typeof MaterialIcons | typeof AntDesign>["name"]
   >
 >;
 
@@ -44,14 +45,21 @@ export function IconSymbol({
   // return <MaterialIcons color={color} size={size} name={MAPPING[name]} style={style} />;
   // Проверяем, есть ли иконка в MaterialIcons
   if (MAPPING[name] && MaterialIcons.glyphMap[MAPPING[name]]) {
-    return <MaterialIcons color={color} size={size} name={MAPPING[name]} style={style} />;
+    return (
+      <MaterialIcons
+        color={color}
+        size={size}
+        name={MAPPING[name]}
+        style={style}
+      />
+    );
   }
 
   // Проверяем, есть ли иконка в AntDesign
   if (AntDesign.glyphMap[name]) {
     return <AntDesign color={color} size={size} name={name} style={style} />;
   }
-    // Если иконка не найдена, отображаем пустой компонент
-    console.warn(`Icon "${name}" not found in MaterialIcons or AntDesign`);
-    return null;
+  // Если иконка не найдена, отображаем пустой компонент
+  console.warn(`Icon "${name}" not found in MaterialIcons or AntDesign`);
+  return null;
 }
