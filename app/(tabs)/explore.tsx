@@ -11,7 +11,7 @@ export default function TabTwoScreen() {
   const colorScheme = useColorScheme();
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
+      headerBackgroundColor={{ light: "#A3A1DC", dark: "#1D3D47" }}
       // lakiria-logo-red.png
       headerImage={
         // <IconSymbol
@@ -122,10 +122,10 @@ export default function TabTwoScreen() {
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: "#808080",
-    bottom: -90,
-    left: -35,
-    position: "absolute",
+    // color: "#808080",
+    // bottom: -90,
+    // left: -35,
+    // position: "absolute",
   },
   titleContainer: {
     flexDirection: "row",
