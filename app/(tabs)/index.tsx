@@ -6,8 +6,6 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { useColorScheme } from "@/hooks/useColorScheme";
 
-import ThemeToggler from "@/components/ThemeToggler";
-
 function PlatformText({ children }) {
   return (
     <ThemedText>
@@ -76,10 +74,8 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     width: "100%",
-    // opacity: colorScheme === 'dark' ? 0.9 : 0.8,
     opacity: 0.8,
     overflow: "hidden",
-    // backgroundColor: colorScheme === 'dark' ? '#1D3D47' : '#A3A1DC',
     backgroundColor: "#A3A1DC",
     borderRadius: 0,
     ...Platform.select({
