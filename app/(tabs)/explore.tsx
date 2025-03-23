@@ -5,9 +5,10 @@ import { ExternalLink } from "@/components/ExternalLink";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { IconSymbol } from "@/components/ui/IconSymbol";
+import { useColorScheme } from "@/hooks/useColorScheme.web";
 
 export default function TabTwoScreen() {
+  const colorScheme = useColorScheme();
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
@@ -19,8 +20,17 @@ export default function TabTwoScreen() {
         //   name="chevron.left.forwardslash.chevron.right"
         //   style={styles.headerImage}
         // />
+        // <Image
+        //   source={require("@/assets/images/lakiria-logo-red.png")}
+        //   style={[styles.container, styles.reactLogo]}
+        //   resizeMode="stretch"
+        // />
         <Image
-          source={require("@/assets/images/lakiria-logo-red.png")}
+          source={
+            colorScheme === "dark"
+              ? require("@/assets/images/lakiria-logo-black.png") // Темная тема
+              : require("@/assets/images/lakiria-logo-white.png") // Светлая тема
+          }
           style={[styles.container, styles.reactLogo]}
           resizeMode="stretch"
         />
@@ -54,7 +64,7 @@ export default function TabTwoScreen() {
           Текст 9 <ThemedText type="defaultSemiBold">Текст 10</ThemedText> Текст
           11 <ThemedText type="defaultSemiBold">Текст 12</ThemedText> Текст 13
         </ThemedText>
-        <Image
+        {/* <Image
           source={require("@/assets/images/lakiria-logo-white.png")}
           style={{
             resizeMode: "stretch",
@@ -62,6 +72,15 @@ export default function TabTwoScreen() {
             height: 178,
             width: 290,
           }}
+        /> */}
+        <Image
+          source={
+            colorScheme === "dark"
+              ? require("@/assets/images/lakiria-logo-black.png") // Темная тема
+              : require("@/assets/images/lakiria-logo-white.png") // Светлая тема
+          }
+          style={[styles.container, styles.reactLogo]}
+          resizeMode="stretch"
         />
         <ExternalLink href="https://lakiria.ru">
           <ThemedText type="link">Новое окно</ThemedText>
