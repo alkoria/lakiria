@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     width: "100%",
-    opacity: 0.8,
+    opacity: 1,
     overflow: "hidden",
     backgroundColor: "#A3A1DC",
     borderRadius: 0,
