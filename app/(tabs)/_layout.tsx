@@ -45,6 +45,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="cube"
+        options={{
+          title: "Кубы",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="bars" color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
