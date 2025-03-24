@@ -64,7 +64,7 @@ export default function TabTwoScreen() {
           Текст 9 <ThemedText type="defaultSemiBold">Текст 10</ThemedText> Текст
           11 <ThemedText type="defaultSemiBold">Текст 12</ThemedText> Текст 13
         </ThemedText>
-        {/* <Image
+        <Image
           source={require("@/assets/images/lakiria-logo-white.png")}
           style={{
             resizeMode: "stretch",
@@ -72,16 +72,8 @@ export default function TabTwoScreen() {
             height: 178,
             width: 290,
           }}
-        /> */}
-        <Image
-          source={
-            colorScheme === "dark"
-              ? require("@/assets/images/lakiria-logo-black.png") // Темная тема
-              : require("@/assets/images/lakiria-logo-white.png") // Светлая тема
-          }
-          style={[styles.container, styles.reactLogo]}
-          resizeMode="stretch"
         />
+
         <ExternalLink href="https://lakiria.ru">
           <ThemedText type="link">Новое окно</ThemedText>
         </ExternalLink>
@@ -138,7 +130,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     width: "100%",
-    opacity: 0.8,
+    opacity: 1,
     overflow: "hidden",
     backgroundColor: "#A3A1DC",
     borderRadius: 0,
