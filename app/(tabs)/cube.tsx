@@ -36,84 +36,129 @@ const AlignItemsLayout = () => {
           <View style={[styles.box, { backgroundColor: "skyblue" }]} />
           <View style={[styles.box, { backgroundColor: "steelblue" }]} />
         </View> */}
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            { backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8" },
-          ]}
-        />
+        <View>
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          >
+            <Text
+              style={{
+                color:"#00ff00",
+                textAlign: "center",
+                textShadowColor: "red",
+                // textShadowOffset: { width: 0.5, height: 0.5 },
+                textShadowRadius: 2,
+              }}
+            >
+              №1
+            </Text>
+          </View>
+
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          />
+
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          />
+
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          />
+        </View>
+        <View>
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          />
+
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          />
+
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          />
+
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          />
+        </View>
+        <View>
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          />
+
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          />
+
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          />
+
+          <View
+            style={[
+              styles.box,
+              {
+                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+              },
+            ]}
+          />
+        </View>
       </PreviewLayout>
     </ParallaxScrollView>
   );
