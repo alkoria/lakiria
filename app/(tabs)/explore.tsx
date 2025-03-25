@@ -28,7 +28,7 @@ export default function TabTwoScreen() {
         <Image
           source={
             colorScheme === "dark"
-              ? require("@/assets/images/lakiria-logo-black.png") // Темная тема
+              ? require("@/assets/images/lakiria-logo-black-rm.png") // Темная тема
               : require("@/assets/images/lakiria-logo-white.png") // Светлая тема
           }
           style={[styles.container, styles.reactLogo]}
