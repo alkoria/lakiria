@@ -5,6 +5,7 @@ import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { useColorScheme } from "@/hooks/useColorScheme";
+import ThemeToggler from "@/components/ThemeToggler";
 
 function PlatformText({ children }) {
   return (
@@ -42,6 +43,8 @@ export default function HomeScreen() {
         <ThemedText type="title"></ThemedText>
       </ThemedView>
       <ThemedView style={[styles.centerContainer, styles.stepContainer]}>
+        <ThemedText type="subtitle">-----------------------------</ThemedText>
+        <ThemeToggler />
         <ThemedText type="subtitle">-----------------------------</ThemedText>
         <HelloWave />
         <ThemedText type="subtitle">-----------------------------</ThemedText>
