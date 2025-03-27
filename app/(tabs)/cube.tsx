@@ -36,129 +36,153 @@ const AlignItemsLayout = () => {
           <View style={[styles.box, { backgroundColor: "skyblue" }]} />
           <View style={[styles.box, { backgroundColor: "steelblue" }]} />
         </View> */}
-        <View>
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
-          >
-            <Text
-              style={{
-                color:"#00ff00",
-                textAlign: "center",
-                textShadowColor: "red",
-                // textShadowOffset: { width: 0.5, height: 0.5 },
-                textShadowRadius: 2,
-              }}
-            >
-              №1
-            </Text>
-          </View>
 
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
-          />
-
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
-          />
-
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        >
+          {/* <Text
+            style={{
+              color: "#00ff00",
+              textAlign: "center",
+              textShadowColor: "red",
+              // textShadowOffset: { width: 0.5, height: 0.5 },
+              textShadowRadius: 2,
+            }}
+          ></Text> */}
+          <img
+            src="https://i.postimg.cc/rp1Ptd18/Screenshot-20250326-005428-edit-105518724999523.jpg"
+            alt="Screenshot-20250326-005428-edit-105518724999523"
           />
         </View>
-        <View>
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
-          />
 
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
-          />
-
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
-          />
-
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        >
+          <img
+            src="https://i.postimg.cc/W4Ly3mJW/Screenshot-20250326-005541-edit-105555122953163.jpg"
+            alt="Screenshot-20250326-005541-edit-105555122953163"
           />
         </View>
-        <View>
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
-          />
 
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
-          />
-
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
-          />
-
-          <View
-            style={[
-              styles.box,
-              {
-                backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
-              },
-            ]}
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        >
+          <img
+            src="https://i.postimg.cc/mDVp80pJ/Screenshot-20250326-005441-edit-105492386319318.jpg"
+            alt="Screenshot-20250326-005441-edit-105492386319318"
           />
         </View>
+
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        >
+          <img
+            src="https://i.postimg.cc/26CXdzGn/Screenshot-20250326-005454-edit-105466726359426.jpg"
+            alt="Screenshot-20250326-005454-edit-105466726359426"
+          />
+        </View>
+
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        >
+          <img
+            src="https://i.postimg.cc/ZnR7gV1R/Screenshot-20250326-005506-edit-105393628144854.jpg"
+            alt="Screenshot-20250326-005506-edit-105393628144854"
+          />
+        </View>
+
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        >
+          <img
+            src="https://i.postimg.cc/6qmjNCXh/Screenshot-20250326-005520.jpg"
+            alt="Screenshot-20250326-005520"
+          />
+        </View>
+
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        />
+
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        />
+
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        />
+
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        />
+
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        />
+
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        />
       </PreviewLayout>
     </ParallaxScrollView>
   );
@@ -233,8 +257,8 @@ const styles = StyleSheet.create({
     minHeight: 200,
   },
   box: {
-    width: 50,
-    height: 50,
+    width: 150,
+    height: 150,
     margin: 50, // Отступ между квадратами
   },
   row: {
