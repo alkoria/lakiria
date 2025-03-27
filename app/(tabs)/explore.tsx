@@ -74,6 +74,15 @@ export default function TabTwoScreen() {
           }}
         />
 
+        <img
+          src="https://i.postimg.cc/QxG76WTp/lakiria-logo-blue-rm.png"
+          alt="lakiria-logo-blue-rm"
+        />
+        <img
+          src="https://i.postimg.cc/BZ1DcCXS/lakiria-logo-black-rm.png"
+          alt="lakiria-logo-black-rm"
+        />
+
         <ExternalLink href="https://lakiria.ru">
           <ThemedText type="link">Новое окно</ThemedText>
         </ExternalLink>
