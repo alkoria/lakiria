@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { View, Image, TouchableOpacity, Text, StyleSheet } from "react-native";
+import { View, Image,  Text, StyleSheet } from "react-native";
 import type { PropsWithChildren } from "react";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
-import { useColorScheme } from "@/hooks/useColorScheme.web";
+import { useColorScheme } from "@/hooks/useColorScheme";
 
 const AlignItemsLayout = () => {
   const [alignItems, setAlignItems] = useState("center"); // Начальное значение
@@ -54,10 +54,19 @@ const AlignItemsLayout = () => {
               textShadowRadius: 2,
             }}
           ></Text> */}
-          <img
+          <Image
+            source={{
+              uri: `https://i.postimg.cc/hz0pMTrV/linux.png`,
+            }}
+            style={{ width: "100%", height: "100%" }}
+            onError={(error) =>
+              console.log("Ошибка загрузки изображения:", error.nativeEvent)
+            }
+          />
+          {/* <img
             src="https://i.postimg.cc/rp1Ptd18/Screenshot-20250326-005428-edit-105518724999523.jpg"
             alt="Screenshot-20250326-005428-edit-105518724999523"
-          />
+          /> */}
         </View>
 
         <View
@@ -68,121 +77,176 @@ const AlignItemsLayout = () => {
             },
           ]}
         >
-          <img
+          <Image
+            source={{
+              uri: `https://i.postimg.cc/N9td1p1g/windows.png`,
+            }}
+            style={{ width: "100%", height: "100%" }}
+            onError={(error) =>
+              console.log("Ошибка загрузки изображения:", error.nativeEvent)
+            }
+          />
+          {/* <img
             src="https://i.postimg.cc/W4Ly3mJW/Screenshot-20250326-005541-edit-105555122953163.jpg"
             alt="Screenshot-20250326-005541-edit-105555122953163"
-          />
+          /> */}
         </View>
 
-        <View
+        {/* <View
           style={[
             styles.box,
             {
               backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
             },
           ]}
-        >
-          <img
+        > */}
+
+          {/* <img
             src="https://i.postimg.cc/mDVp80pJ/Screenshot-20250326-005441-edit-105492386319318.jpg"
             alt="Screenshot-20250326-005441-edit-105492386319318"
-          />
-        </View>
+          /> */}
+          {/* <Image
+            source={{
+              uri: `https://i.postimg.cc/mDVp80pJ/Screenshot-20250326-005441-edit-105492386319318.jpg`,
+            }}
+            style={{ width: "100%", height: "100%" }}
+            onError={(error) =>
+              console.log("Ошибка загрузки изображения:", error.nativeEvent)
+            }
+          /> */}
+        {/* </View> */}
 
-        <View
+        {/* <View
           style={[
             styles.box,
             {
               backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
             },
           ]}
-        >
-          <img
+        > */}
+
+          {/* <img
             src="https://i.postimg.cc/26CXdzGn/Screenshot-20250326-005454-edit-105466726359426.jpg"
             alt="Screenshot-20250326-005454-edit-105466726359426"
-          />
-        </View>
+          /> */}
+          {/* <Image
+            source={{
+              uri: `https://i.postimg.cc/26CXdzGn/Screenshot-20250326-005454-edit-105466726359426.jpg`,
+            }}
+            style={{ width: "100%", height: "100%" }}
+            onError={(error) =>
+              console.log("Ошибка загрузки изображения:", error.nativeEvent)
+            }
+          /> */}
 
-        <View
+        {/* </View> */}
+
+        {/* <View
           style={[
             styles.box,
             {
               backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
             },
           ]}
-        >
-          <img
+        > */}
+
+          {/* <img
             src="https://i.postimg.cc/ZnR7gV1R/Screenshot-20250326-005506-edit-105393628144854.jpg"
             alt="Screenshot-20250326-005506-edit-105393628144854"
-          />
-        </View>
+          /> */}
 
-        <View
+          {/* <Image
+            source={{
+              uri: `https://i.postimg.cc/ZnR7gV1R/Screenshot-20250326-005506-edit-105393628144854.jpg`,
+            }}
+            style={{ width: "100%", height: "100%" }}
+            onError={(error) =>
+              console.log("Ошибка загрузки изображения:", error.nativeEvent)
+            }
+          /> */}
+
+        {/* </View> */}
+
+        {/* <View
           style={[
             styles.box,
             {
               backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
             },
           ]}
-        >
-          <img
+        > */}
+
+          {/* <img
             src="https://i.postimg.cc/6qmjNCXh/Screenshot-20250326-005520.jpg"
             alt="Screenshot-20250326-005520"
-          />
-        </View>
+          /> */}
 
-        <View
+          {/* <Image
+            source={{
+              uri: `https://i.postimg.cc/6qmjNCXh/Screenshot-20250326-005520.jpg`,
+            }}
+            style={{ width: "100%", height: "100%" }}
+            onError={(error) =>
+              console.log("Ошибка загрузки изображения:", error.nativeEvent)
+            }
+          /> */}
+
+        {/* </View> */}
+
+        {/* <View
           style={[
             styles.box,
             {
               backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
             },
           ]}
-        />
+        /> */}
 
-        <View
+        {/* <View
           style={[
             styles.box,
             {
               backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
             },
           ]}
-        />
+        /> */}
 
-        <View
+        {/* <View
           style={[
             styles.box,
             {
               backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
             },
           ]}
-        />
+        /> */}
 
-        <View
+        {/* <View
           style={[
             styles.box,
             {
               backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
             },
           ]}
-        />
+        /> */}
 
-        <View
+        {/* <View
           style={[
             styles.box,
             {
               backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
             },
           ]}
-        />
+        /> */}
 
-        <View
+        {/* <View
           style={[
             styles.box,
             {
               backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
             },
           ]}
-        />
+        /> */}
+        
       </PreviewLayout>
     </ParallaxScrollView>
   );
