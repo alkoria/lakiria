@@ -3,7 +3,7 @@ import { TouchableOpacity, Text, StyleSheet, Platform } from "react-native";
 import {
   useColorScheme,
   useToggleColorScheme,
-} from "@/hooks/useColorScheme.web";
+} from "@/hooks/useColorScheme";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import * as SplashScreen from "expo-splash-screen";
 import { Ionicons } from "@expo/vector-icons";
