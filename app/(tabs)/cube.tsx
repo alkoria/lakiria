@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Image,  Text, StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet } from "react-native";
 import type { PropsWithChildren } from "react";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { useColorScheme } from "@/hooks/useColorScheme";
@@ -24,7 +24,7 @@ const AlignItemsLayout = () => {
       }
     >
       <PreviewLayout
-        label="CUBE"
+        label="Меню"
         selectedValue={alignItems}
         values={["flex-start", "center", "flex-end"]} // Только три варианта
         setSelectedValue={setAlignItems}
@@ -101,11 +101,11 @@ const AlignItemsLayout = () => {
           ]}
         > */}
 
-          {/* <img
+        {/* <img
             src="https://i.postimg.cc/mDVp80pJ/Screenshot-20250326-005441-edit-105492386319318.jpg"
             alt="Screenshot-20250326-005441-edit-105492386319318"
           /> */}
-          {/* <Image
+        {/* <Image
             source={{
               uri: `https://i.postimg.cc/mDVp80pJ/Screenshot-20250326-005441-edit-105492386319318.jpg`,
             }}
@@ -125,11 +125,11 @@ const AlignItemsLayout = () => {
           ]}
         > */}
 
-          {/* <img
+        {/* <img
             src="https://i.postimg.cc/26CXdzGn/Screenshot-20250326-005454-edit-105466726359426.jpg"
             alt="Screenshot-20250326-005454-edit-105466726359426"
           /> */}
-          {/* <Image
+        {/* <Image
             source={{
               uri: `https://i.postimg.cc/26CXdzGn/Screenshot-20250326-005454-edit-105466726359426.jpg`,
             }}
@@ -150,12 +150,12 @@ const AlignItemsLayout = () => {
           ]}
         > */}
 
-          {/* <img
+        {/* <img
             src="https://i.postimg.cc/ZnR7gV1R/Screenshot-20250326-005506-edit-105393628144854.jpg"
             alt="Screenshot-20250326-005506-edit-105393628144854"
           /> */}
 
-          {/* <Image
+        {/* <Image
             source={{
               uri: `https://i.postimg.cc/ZnR7gV1R/Screenshot-20250326-005506-edit-105393628144854.jpg`,
             }}
@@ -176,12 +176,12 @@ const AlignItemsLayout = () => {
           ]}
         > */}
 
-          {/* <img
+        {/* <img
             src="https://i.postimg.cc/6qmjNCXh/Screenshot-20250326-005520.jpg"
             alt="Screenshot-20250326-005520"
           /> */}
 
-          {/* <Image
+        {/* <Image
             source={{
               uri: `https://i.postimg.cc/6qmjNCXh/Screenshot-20250326-005520.jpg`,
             }}
@@ -246,7 +246,6 @@ const AlignItemsLayout = () => {
             },
           ]}
         /> */}
-        
       </PreviewLayout>
     </ParallaxScrollView>
   );
