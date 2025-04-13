@@ -38,20 +38,19 @@ export default function TabLayout() {
           ),
         }}
       />
-
       <Tabs.Screen
-        name="explore"
+        name="cube"
         options={{
-          title: "Содержание",
+          title: "Меню",
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="bars" color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="cube"
+        name="explore"
         options={{
-          title: "Кубы",
+          title: "Содержание",
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="bars" color={color} />
           ),
