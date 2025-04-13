@@ -73,15 +73,32 @@ export default function TabTwoScreen() {
             width: 290,
           }}
         />
-
-        <img
+        <Image
+          source={{
+            uri: `https://i.postimg.cc/QxG76WTp/lakiria-logo-blue-rm.png`,
+          }}
+          style={{ width: "100%", height: "100%" }}
+          onError={(error) =>
+            console.log("Ошибка загрузки изображения:", error.nativeEvent)
+          }
+        />
+        <Image
+          source={{
+            uri: `https://i.postimg.cc/BZ1DcCXS/lakiria-logo-black-rm.png`,
+          }}
+          style={{ width: "100%", height: "100%" }}
+          onError={(error) =>
+            console.log("Ошибка загрузки изображения:", error.nativeEvent)
+          }
+        />
+        {/* <img
           src="https://i.postimg.cc/QxG76WTp/lakiria-logo-blue-rm.png"
           alt="lakiria-logo-blue-rm"
         />
         <img
           src="https://i.postimg.cc/BZ1DcCXS/lakiria-logo-black-rm.png"
           alt="lakiria-logo-black-rm"
-        />
+        /> */}
 
         <ExternalLink href="https://lakiria.ru">
           <ThemedText type="link">Новое окно</ThemedText>
