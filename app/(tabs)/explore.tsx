@@ -1,37 +1,28 @@
 import { StyleSheet, Image, Platform } from "react-native";
-
+import React, { useState } from "react";
 import { Collapsible } from "@/components/Collapsible";
 import { ExternalLink } from "@/components/ExternalLink";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { useColorScheme } from "@/hooks/useColorScheme.web";
+import { useColorScheme } from "@/hooks/useColorScheme";
 
 export default function TabTwoScreen() {
-  const colorScheme = useColorScheme();
+  const [alignItems, setAlignItems] = useState("center"); // Начальное значение
+  const colorScheme = useColorScheme(); // Текущая тема
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A3A1DC", dark: "#1D3D47" }}
       // lakiria-logo-red.png
       headerImage={
-        // <IconSymbol
-        //   size={310}
-        //   color="#808080"
-        //   name="chevron.left.forwardslash.chevron.right"
-        //   style={styles.headerImage}
-        // />
-        // <Image
-        //   source={require("@/assets/images/lakiria-logo-red.png")}
-        //   style={[styles.container, styles.reactLogo]}
-        //   resizeMode="stretch"
-        // />
         <Image
           source={
             colorScheme === "dark"
               ? require("@/assets/images/lakiria-logo-black-rm.png") // Темная тема
               : require("@/assets/images/lakiria-logo-white.png") // Светлая тема
           }
-          style={[styles.container, styles.reactLogo]}
+          style={[styles.container]}
           resizeMode="stretch"
         />
       }
