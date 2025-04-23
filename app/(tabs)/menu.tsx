@@ -55,7 +55,7 @@ const AlignItemsLayout = () => {
               textShadowRadius: 2,
             }}
           ></Text> */}
-         
+
           {/* <Image
             source={{
               uri: `https://i.postimg.cc/hz0pMTrV/linux.png`,
@@ -65,22 +65,22 @@ const AlignItemsLayout = () => {
               console.log("Ошибка загрузки изображения:", error.nativeEvent)
             }
           /> */}
-         
-         <TouchableOpacity
-      onPress={() => router.push("/os/linux")} // Переход на экран os/linux
-      style={{ width: "100%", height: "100%" }}
-    >
-      <Image
-        source={{
-          uri: "https://i.postimg.cc/hz0pMTrV/linux.png",
-        }}
-        style={{ width: "100%", height: "100%" }}
-        onError={(error) =>
-          console.log("Ошибка загрузки изображения:", error.nativeEvent)
-        }
-      />
-    </TouchableOpacity>
-         
+
+          <TouchableOpacity
+            onPress={() => router.push("/os/linux")} // Переход на экран os/linux
+            style={{ width: "100%", height: "100%" }}
+          >
+            <Image
+              source={{
+                uri: "https://i.postimg.cc/hz0pMTrV/linux.png",
+              }}
+              style={{ width: "100%", height: "100%" }}
+              onError={(error) =>
+                console.log("Ошибка загрузки изображения:", error.nativeEvent)
+              }
+            />
+          </TouchableOpacity>
+
           {/* <img
             src="https://i.postimg.cc/rp1Ptd18/Screenshot-20250326-005428-edit-105518724999523.jpg"
             alt="Screenshot-20250326-005428-edit-105518724999523"
@@ -95,15 +95,20 @@ const AlignItemsLayout = () => {
             },
           ]}
         >
-          <Image
-            source={{
-              uri: `https://i.postimg.cc/N9td1p1g/windows.png`,
-            }}
+          <TouchableOpacity
+            onPress={() => router.push("/os/windows")} // Переход на экран os/linux
             style={{ width: "100%", height: "100%" }}
-            onError={(error) =>
-              console.log("Ошибка загрузки изображения:", error.nativeEvent)
-            }
-          />
+          >
+            <Image
+              source={{
+                uri: `https://i.postimg.cc/N9td1p1g/windows.png`,
+              }}
+              style={{ width: "100%", height: "100%" }}
+              onError={(error) =>
+                console.log("Ошибка загрузки изображения:", error.nativeEvent)
+              }
+            />
+          </TouchableOpacity>
           {/* <img
             src="https://i.postimg.cc/W4Ly3mJW/Screenshot-20250326-005541-edit-105555122953163.jpg"
             alt="Screenshot-20250326-005541-edit-105555122953163"
