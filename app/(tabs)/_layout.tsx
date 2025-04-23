@@ -66,6 +66,16 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="os/windows"
+        options={{
+          href: null,
+          title: "windows",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="bars" color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
