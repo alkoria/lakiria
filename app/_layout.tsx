@@ -37,6 +37,7 @@ export default function RootLayout() {
       <ThemeToggler />
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        {/* <Stack.Screen name="(os)" options={{ headerShown: false }} /> */}
         <Stack.Screen name="+not-found" />
       </Stack>
 
