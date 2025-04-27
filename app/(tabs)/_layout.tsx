@@ -34,7 +34,7 @@ export default function TabLayout() {
         options={{
           title: "Главная",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+            <IconSymbol size={20} name="house.fill" color={color} />
           ),
         }}
       />
@@ -43,7 +43,7 @@ export default function TabLayout() {
         options={{
           title: "Меню",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="bars" color={color} />
+            <IconSymbol size={20} name="bars" color={color} />
           ),
         }}
       />
@@ -52,7 +52,17 @@ export default function TabLayout() {
         options={{
           title: "Содержание",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="bars" color={color} />
+            <IconSymbol size={20} name="bars" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="about"
+        options={{
+          href: null,
+          title: "Обо мне",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={20} name="bars" color={color} />
           ),
         }}
       />
@@ -62,7 +72,7 @@ export default function TabLayout() {
           href: null,
           title: "linux",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="bars" color={color} />
+            <IconSymbol size={20} name="bars" color={color} />
           ),
         }}
       />
@@ -72,7 +82,7 @@ export default function TabLayout() {
           href: null,
           title: "windows",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="bars" color={color} />
+            <IconSymbol size={20} name="bars" color={color} />
           ),
         }}
       />
