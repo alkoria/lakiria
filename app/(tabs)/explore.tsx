@@ -1,4 +1,10 @@
-import { StyleSheet, Image, Platform, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Image,
+  Platform,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React, { useState } from "react";
 import { Collapsible } from "@/components/Collapsible";
 import { ExternalLink } from "@/components/ExternalLink";
@@ -7,7 +13,7 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { router } from "expo-router";
-
+import { IconSymbol } from "@/components/ui/IconSymbol";
 export default function TabTwoScreen() {
   const [alignItems, setAlignItems] = useState("center"); // Начальное значение
   const colorScheme = useColorScheme(); // Текущая тема
@@ -38,9 +44,18 @@ export default function TabTwoScreen() {
         onPress={() => router.push("/about")} // Переход на экран os/linux
         style={{ width: "100%", height: "100%" }}
       >
-        <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
+        {/* <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
           Обо мне...
-        </ThemedText>
+        </ThemedText> */}
+        <View>
+          <ThemedText
+            style={[styles.text, { fontFamily: "SpaceMono-Regular" }]}
+          >
+            <IconSymbol size={20} name="arrowright" color={colorScheme}/>
+             Обо мне 
+            <IconSymbol size={20} name="arrowleft" color={colorScheme}/>
+          </ThemedText>
+        </View>
       </TouchableOpacity>
 
       <Collapsible
