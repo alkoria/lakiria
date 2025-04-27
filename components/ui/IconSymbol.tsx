@@ -5,7 +5,6 @@ import { SymbolWeight } from "expo-symbols";
 import React from "react";
 import { OpaqueColorValue, StyleProp, ViewStyle } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 // Add your SFSymbol to MaterialIcons mappings here.
 const MAPPING = {
   // See MaterialIcons here: https://icons.expo.fyi
@@ -16,6 +15,8 @@ const MAPPING = {
   "chevron.right": "chevron-right",
   // Маппинг для AntDesign
   bars: "bars", // "bars" из AntDesign
+  arrowright: "arrowright",
+  arrowleft: "arrowleft",
 } as Partial<
   Record<
     import("expo-symbols").SymbolViewProps["name"],
