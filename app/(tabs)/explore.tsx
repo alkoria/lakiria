@@ -14,6 +14,7 @@ import { ThemedView } from "@/components/ThemedView";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { router } from "expo-router";
 import { IconSymbol } from "@/components/ui/IconSymbol";
+import { FontAwesome } from "@expo/vector-icons";
 export default function TabTwoScreen() {
   const [alignItems, setAlignItems] = useState("center"); // Начальное значение
   const colorScheme = useColorScheme(); // Текущая тема
@@ -34,47 +35,55 @@ export default function TabTwoScreen() {
         />
       }
     >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Содержание</ThemedText>
-      </ThemedView>
+      <View style={[styles.centerContainer]}>
+        <ThemedView style={styles.titleContainer}>
+          <ThemedText type="title">Содержание</ThemedText>
+        </ThemedView>
+      </View>
+
+      <View style={[styles.centerContainer]}>
+        <FontAwesome.Button
+          name="comment" // Имя иконки
+          style={styles.neonText}
+          backgroundColor={colorScheme === "dark" ? "#fff" : "#000"}
+          color={colorScheme === "dark" ? "#000" : "#fff"}
+          onPress={() => router.push("/about")}
+        >
+          Обо мне
+        </FontAwesome.Button>
+
+        {/* <TouchableOpacity
+        onPress={() => router.push("/about")} // Переход на экран os/linux
+        style={{ width: "100%", height: "100%" }}
+      > */}
+        {/* <ThemedText>
+            <IconSymbol size={20} name="arrowright" color={colorScheme} />
+            Обо мне
+            <IconSymbol size={20} name="arrowleft" color={colorScheme} />
+          </ThemedText> */}
+        {/* </TouchableOpacity> */}
+      </View>
 
       {/* <Collapsible title="Пункт первый"> */}
 
-      <TouchableOpacity
-        onPress={() => router.push("/about")} // Переход на экран os/linux
-        style={{ width: "100%", height: "100%" }}
-      >
-        {/* <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
-          Обо мне...
-        </ThemedText> */}
-        <View>
-          <ThemedText
-            style={[styles.text, { fontFamily: "SpaceMono-Regular" }]}
-          >
-            <IconSymbol size={20} name="arrowright" color={colorScheme}/>
-             Обо мне 
-            <IconSymbol size={20} name="arrowleft" color={colorScheme}/>
-          </ThemedText>
-        </View>
-      </TouchableOpacity>
-
-      <Collapsible
+      {/* <Collapsible
         title={
           <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
             Пункт первый.
           </ThemedText>
         }
-      >
-        <ThemedText style={{ fontFamily: "SpaceMono" }}>Текст 14</ThemedText>
+      > */}
+      {/* <ThemedText style={{ fontFamily: "SpaceMono" }}>Текст 14</ThemedText> */}
 
-        {/* <ThemedText>
+      {/* <ThemedText>
           Текст <ThemedText type="defaultSemiBold">Текст 13</ThemedText> Текст{" "}
         </ThemedText> */}
 
-        {/* <ExternalLink href="https://lakiria.ru">
+      {/* <ExternalLink href="https://lakiria.ru">
           <ThemedText type="link">Текст 15</ThemedText>
         </ExternalLink> */}
-      </Collapsible>
+
+      {/* </Collapsible> */}
 
       {/* <ThemedText>Весь список:</ThemedText> */}
 
@@ -187,6 +196,18 @@ export default function TabTwoScreen() {
 }
 
 const styles = StyleSheet.create({
+  neonText: {
+    // color: "#fff", // Цвет текста (белый)
+    textShadowColor: "#0a9cfa", // Цвет тени (неоновый розовый)
+    textShadowRadius: 10, // Радиус размытия тени
+    fontSize: 24, // Размер шрифта
+    fontWeight: "bold", // Жирность шрифта
+    textAlign: "center", // Выравнивание текста по центру
+  },
+  centerContainer: {
+    alignItems: "center", // Центрирует по горизонтали
+    justifyContent: "center", // Опционально: центрирует по вертикали
+  },
   headerImage: {
     // color: "#808080",
     // bottom: -90,
