@@ -64,12 +64,13 @@ const AlignItemsLayout = () => {
         />
       }
     >
-      <ThemedView style={styles.titleContainer}>
-              <ThemedText  type="title">Мои скилы</ThemedText>
-            </ThemedView>
+      <ThemedView>
+        <ThemedText type="title">Скилы</ThemedText>
+      </ThemedView>
+
       <Collapsible
         title={
-          <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
+          <ThemedText style={[{ fontFamily: "SpaceMono-Regular" }]}>
             Windows
           </ThemedText>
         }
@@ -84,6 +85,7 @@ const AlignItemsLayout = () => {
                 <ThemedText type="link">Текст 15</ThemedText>
               </ExternalLink> */}
       </Collapsible>
+
       <Collapsible
         title={
           <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
@@ -101,6 +103,7 @@ const AlignItemsLayout = () => {
                 <ThemedText type="link">Текст 15</ThemedText>
               </ExternalLink> */}
       </Collapsible>
+
       {/* <SectionList
         sections={DATA}
         keyExtractor={(item, index) => item + index}
@@ -149,6 +152,11 @@ const AlignItemsLayout = () => {
 };
 
 const styles = StyleSheet.create({
+  centr: {
+    flex: 1,
+    justifyContent: "center", // Выравнивание по центру
+    textAlign: "center",
+  },
   container: {
     flex: 1,
     height: "100%",
