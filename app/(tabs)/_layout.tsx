@@ -67,6 +67,16 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="about0"
+        options={{
+          href: null,
+          title: "Обо мне",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={20} name="bars" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="os/linux"
         options={{
           href: null,
