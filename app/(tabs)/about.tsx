@@ -14,6 +14,7 @@ import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { Collapsible } from "@/components/Collapsible";
 import { ThemedView } from "@/components/ThemedView";
+
 function PlatformText({ children }) {
   return (
     <ThemedText>
@@ -28,24 +29,7 @@ function PlatformText({ children }) {
     </ThemedText>
   );
 }
-const DATA = [
-  {
-    title: "Main dishes",
-    data: ["Pizza", "Burger", "Risotto"],
-  },
-  {
-    title: "Sides",
-    data: ["French Fries", "Onion Rings", "Fried Shrimps"],
-  },
-  {
-    title: "Drinks",
-    data: ["Water", "Coke", "Beer"],
-  },
-  {
-    title: "Desserts",
-    data: ["Cheese Cake", "Ice Cream"],
-  },
-];
+
 const AlignItemsLayout = () => {
   const [alignItems, setAlignItems] = useState("center"); // Начальное значение
   const colorScheme = useColorScheme(); // Текущая тема
@@ -59,50 +43,154 @@ const AlignItemsLayout = () => {
               ? require("@/assets/images/lakiria-logo-black-rm.png") // Темная тема
               : require("@/assets/images/lakiria-logo-white.png") // Светлая тема
           }
-          style={[styles.container]}
+          style={[styles.imgheader]}
           resizeMode="stretch"
         />
       }
     >
-      <ThemedView>
-        <ThemedText type="title">Скилы</ThemedText>
-      </ThemedView>
+      <View style={[styles.container]}>
+        <ThemedView style={{ marginBottom: 10 }}>
+          <ThemedText type="title">Скилы</ThemedText>
+        </ThemedView>
+      </View>
 
-      <Collapsible
-        title={
-          <ThemedText style={[{ fontFamily: "SpaceMono-Regular" }]}>
-            Windows
-          </ThemedText>
-        }
-      >
-        <ThemedText style={{ fontFamily: "SpaceMono" }}>Про Windows</ThemedText>
+      <View style={[styles.box]}>
+        <View style={[styles.marg]}>
+          <Collapsible
+            title={
+              <ThemedText style={[{ fontFamily: "SpaceMono-Regular" }]}>
+                Windows
+              </ThemedText>
+            }
+           
+          >
+            <ThemedText style={{ fontFamily: "SpaceMono" }}>
+              Про Windows
+            </ThemedText>
+          </Collapsible>
+        </View>
 
-        {/* <ThemedText>
-                Текст <ThemedText type="defaultSemiBold">Текст 13</ThemedText> Текст{" "}
-              </ThemedText> */}
+        <View style={[styles.marg]}>
+          {" "}
+          <Collapsible
+            title={
+              <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
+                Linux
+              </ThemedText>
+            }
+           
+          >
+            <ThemedText style={{ fontFamily: "SpaceMono" }}>
+              Про Linux
+            </ThemedText>
+          </Collapsible>
+        </View>
 
-        {/* <ExternalLink href="https://lakiria.ru">
-                <ThemedText type="link">Текст 15</ThemedText>
-              </ExternalLink> */}
-      </Collapsible>
+        <View style={[styles.marg]}>
+          <Collapsible
+            title={
+              <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
+                Linux
+              </ThemedText>
+            }
+           
+          >
+            <ThemedText style={{ fontFamily: "SpaceMono" }}>
+              Про Linux
+            </ThemedText>
+          </Collapsible>
+        </View>
 
-      <Collapsible
-        title={
-          <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
-            Linux
-          </ThemedText>
-        }
-      >
-        <ThemedText style={{ fontFamily: "SpaceMono" }}>Про Linux</ThemedText>
+        <View style={[styles.marg]}>
+          <Collapsible
+            title={
+              <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
+                Linux
+              </ThemedText>
+            }
+           
+          >
+            <ThemedText style={{ fontFamily: "SpaceMono" }}>
+              Про Linux
+            </ThemedText>
+          </Collapsible>
+        </View>
 
-        {/* <ThemedText>
-                Текст <ThemedText type="defaultSemiBold">Текст 13</ThemedText> Текст{" "}
-              </ThemedText> */}
+        <View style={[styles.marg]}>
+          <Collapsible
+            title={
+              <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
+                Linux
+              </ThemedText>
+            }
+           
+          >
+            <ThemedText style={{ fontFamily: "SpaceMono" }}>
+              Про Linux
+            </ThemedText>
+          </Collapsible>
+        </View>
 
-        {/* <ExternalLink href="https://lakiria.ru">
-                <ThemedText type="link">Текст 15</ThemedText>
-              </ExternalLink> */}
-      </Collapsible>
+        <View style={[styles.marg]}>
+          <Collapsible
+            title={
+              <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
+                Linux
+              </ThemedText>
+            }
+           
+          >
+            <ThemedText style={{ fontFamily: "SpaceMono" }}>
+              Про Linux
+            </ThemedText>
+          </Collapsible>
+        </View>
+
+        <View style={[styles.marg]}>
+          <Collapsible
+            title={
+              <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
+                Linux
+              </ThemedText>
+            }
+           
+          >
+            <ThemedText style={{ fontFamily: "SpaceMono" }}>
+              Про Linux
+            </ThemedText>
+          </Collapsible>
+        </View>
+
+        <View style={[styles.marg]}>
+          <Collapsible
+            title={
+              <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
+                Linux
+              </ThemedText>
+            }
+           
+          >
+            <ThemedText style={{ fontFamily: "SpaceMono" }}>
+              Про Linux
+            </ThemedText>
+          </Collapsible>
+        </View>
+
+        <View style={[styles.marg]}>
+          <Collapsible
+            title={
+              <ThemedText style={{ fontFamily: "SpaceMono-Regular" }}>
+                Linux
+              </ThemedText>
+            }
+           
+          >
+            <ThemedText style={{ fontFamily: "SpaceMono" }}>
+              Про Linux
+            </ThemedText>
+          </Collapsible>
+        </View>
+      </View>
 
       {/* <SectionList
         sections={DATA}
@@ -152,21 +240,45 @@ const AlignItemsLayout = () => {
 };
 
 const styles = StyleSheet.create({
-  centr: {
-    flex: 1,
-    justifyContent: "center", // Выравнивание по центру
-    textAlign: "center",
-  },
-  container: {
-    flex: 1,
+  imgheader: {
     height: "100%",
     width: "100%",
-    marginTop: 0,
-    flexDirection: "row", // Горизонтальное расположение
-    flexWrap: "wrap", // Перенос на новую строку
-    justifyContent: "center", // Выравнивание по центру
-    minHeight: 200,
   },
+  container: {
+    flex: 1, // Занимает всё доступное пространство
+    alignItems: "center", // Выравнивание по центру по горизонтали
+    // alignItems: "stretch", // Растягиваем элементы по ширине
+    justifyContent: "center", // Выравнивание по центру по вертикали
+    padding: 20, // Добавляем отступы
+    gap: 10, // Расстояние между элементами
+  },
+  box: {
+    width: "100%", // Ширина контейнера
+    // width: "45%",  // Ширина контейнера
+    // maxWidth: 600, // Максимальная ширина
+    // margin: 500, // Отступы между элементами
+    alignSelf: "center", // Центрируем контейнер
+    flexDirection: "row", // Горизонтальное расположение
+    flexWrap: "wrap", // Перенос на новую строку при необходимости
+    justifyContent: "center", // Выравнивание по центру
+  },
+  // marg: { margin: "5%" }, // Отступы между элементами
+  marg: { margin: 50 }, // Отступы между элементами
+  // container: {
+  //   flex: 1,
+  //   height: "100%",
+  //   width: "100%",
+  //   marginTop: 0,
+  //   flexDirection: "row", // Горизонтальное расположение
+  //   flexWrap: "wrap", // Перенос на новую строку
+  //   justifyContent: "center", // Выравнивание по центру
+  //   minHeight: 200,
+  // },
+  // box: {
+  //   width: 150,
+  //   height: 150,
+  //   margin: 50, // Отступ между квадратами
+  // },
   item: {
     // backgroundColor: "#9624bf",
     // backgroundColor: "#e7edf9",
