@@ -46,7 +46,14 @@ const ExpandableBox = ({ title, content, screenWidth }: ExpandableBoxProps) => {
           { backgroundColor: colorScheme === "dark" ? "#000582" : "#9fd5fa" },
         ]}
       >
-        <Text style={[styles.text, { color: colorScheme === "dark" ? "#fff" : "#000" }]}>{content}</Text>
+        <Text
+          style={[
+            styles.text,
+            { color: colorScheme === "dark" ? "#fff" : "#000" },
+          ]}
+        >
+          {content}
+        </Text>
       </Animated.View>
 
       {/* Кнопка для запуска анимации */}
@@ -73,11 +80,17 @@ const styles = StyleSheet.create({
     borderWidth: 0, // Граница для наглядности
     borderColor: "#ccc", // Цвет границы
     padding: 0, // Внутренние отступы
+    borderRadius: "50%", // Закругление краёв
+    // borderTopLeftRadius: "10%", // Закругление краёв
+    // borderTopRightRadius: "10%", // Закругление краёв
   },
   text: {
     fontSize: 16, // Размер текста
     // color: "#333", // Цвет текста
     textAlign: "center", // Выравнивание текста по центру
+    textShadowColor: "#FFB300", // Цвет тени (например, amber-6)
+    textShadowOffset: { width: 0, height: 0 }, // Смещение тени
+    textShadowRadius: 20, // Радиус размытия тени
   },
 });
 
