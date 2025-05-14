@@ -1,36 +1,31 @@
 import React from "react";
-import { View, Dimensions, Image, StyleSheet } from "react-native";
+import { View, Dimensions, Image, StyleSheet, ScrollView } from "react-native";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import ExpandableBox from "@/components/ExpandableBox"; // Импортируем реиспользуемый компонент
-
+import { skillsData } from "@/text/about-iam";
 export default function About() {
   const screenWidth = Dimensions.get("window").width; // Ширина экрана
   const colorScheme = useColorScheme(); // Текущая тема
 
-  // Пример данных для кнопок
-  const items = [
-    {
-      title: "WINDOWS",
-      content:
-        "Опыт работы с Windows",
-    },
-    {
-      title: "LINUX",
-      content:
-        "Опыт работы с Linux",
-    },
-    {
-      title: "ANDROID",
-      content:
-        "Опыт работы с ANDROID",
-    },
-    {
-      title: "MACOS",
-      content:
-        "Опыт работы с MACOS",
-    },
-  ];
+  // const items = [
+  //   {
+  //     title: "WINDOWS",
+  //     content: "Опыт работы с Windows",
+  //   },
+  //   {
+  //     title: "LINUX",
+  //     content: "Опыт работы с Linux",
+  //   },
+  //   {
+  //     title: "ANDROID",
+  //     content: "Опыт работы с ANDROID",
+  //   },
+  //   {
+  //     title: "MACOS",
+  //     content: "Опыт работы с MACOS",
+  //   },
+  // ];
 
   return (
     <ParallaxScrollView
@@ -48,7 +43,7 @@ export default function About() {
       }
     >
       {/* Рендерим все кнопки */}
-      {items.map((item, index) => (
+      {skillsData.map((item, index) => (
         <ExpandableBox
           key={index}
           title={item.title}
@@ -56,6 +51,14 @@ export default function About() {
           screenWidth={screenWidth}
         />
       ))}
+      {/* {items.map((item, index) => (
+        <ExpandableBox
+          key={index}
+          title={item.title}
+          content={item.content}
+          screenWidth={screenWidth}
+        />
+      ))} */}
     </ParallaxScrollView>
   );
 }
