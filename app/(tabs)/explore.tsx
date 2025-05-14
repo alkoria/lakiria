@@ -63,7 +63,17 @@ export default function TabTwoScreen() {
           </ThemedText> */}
         {/* </TouchableOpacity> */}
       </View>
-
+      <View style={[styles.centerContainer]}>
+        <FontAwesome.Button
+          name="comment" // Имя иконки
+          style={styles.neonText}
+          backgroundColor={colorScheme === "dark" ? "#fff" : "#000"}
+          color={colorScheme === "dark" ? "#000" : "#fff"}
+          onPress={() => router.push("https://t.me/lakiria")}
+        >
+          Выйти на контакт
+        </FontAwesome.Button>
+      </View>
       {/* <Collapsible title="Пункт первый"> */}
 
       {/* <Collapsible
