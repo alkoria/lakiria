@@ -71,7 +71,7 @@ export default function TabTwoScreen() {
           color={colorScheme === "dark" ? "#000" : "#fff"}
           onPress={() => router.push("https://t.me/lakiria")}
         >
-          Выйти на контакт
+          Вступить в контакт
         </FontAwesome.Button>
       </View>
       {/* <Collapsible title="Пункт первый"> */}
