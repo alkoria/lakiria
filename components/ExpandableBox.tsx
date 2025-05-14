@@ -1,6 +1,6 @@
 import { useColorScheme } from "@/hooks/useColorScheme";
 import React from "react";
-import { View, Button, Text, StyleSheet } from "react-native";
+import { View, Button, Text, StyleSheet, ScrollView } from "react-native";
 import Animated, {
   useSharedValue,
   withTiming,
@@ -17,6 +17,18 @@ const ExpandableBox = ({ title, content, screenWidth }: ExpandableBoxProps) => {
   const widthAnimation = useSharedValue(0); // Начальная ширина
   const heightAnimation = useSharedValue(0); // Начальная высота
   const isExpanded = useSharedValue(false); // Состояние расширения
+
+  // const ExpandableBox = ({ title, content, screenWidth }) => {
+  //   return (
+  //     <View style={styles.container}>
+  //       <Text style={styles.title}>{title}</Text>
+  //       {/* Добавляем ScrollView для содержимого */}
+  //       <ScrollView style={styles.scrollView}>
+  //         <Text style={styles.content}>{content}</Text>
+  //       </ScrollView>
+  //     </View>
+  //   );
+  // };
 
   const toggle = () => {
     if (isExpanded.value) {
@@ -36,6 +48,9 @@ const ExpandableBox = ({ title, content, screenWidth }: ExpandableBoxProps) => {
     };
   });
   const colorScheme = useColorScheme(); // Текущая тема
+  const boxBackgroundColor =
+    colorScheme === "dark" ? "rgba(0, 5, 130,.4)" : "#9fd5fa";
+  const textColor = colorScheme === "dark" ? "#fff" : "#000";
   return (
     <View style={styles.container}>
       {/* Раскрывающийся элемент с текстом */}
@@ -43,23 +58,26 @@ const ExpandableBox = ({ title, content, screenWidth }: ExpandableBoxProps) => {
         style={[
           styles.box,
           animatedStyle,
-          { backgroundColor: colorScheme === "dark" ? "#000582" : "#9fd5fa" },
+          // { backgroundColor: colorScheme === "dark" ? "#000582" : "#9fd5fa" },
+          {
+            backgroundColor: boxBackgroundColor,
+          },
         ]}
       >
-        <Text
-          style={[
-            styles.text,
-            { color: colorScheme === "dark" ? "#fff" : "#000" },
-          ]}
+        {" "}
+        <ScrollView
+          showsVerticalScrollIndicator={false} // Скрывает вертикальный ползунок
+          showsHorizontalScrollIndicator={false} // Скрывает горизонтальный ползунок
         >
-          {content}
-        </Text>
+          <Text style={[styles.text, { color: textColor }]}>{content}</Text>
+        </ScrollView>
       </Animated.View>
 
       {/* Кнопка для запуска анимации */}
       <Button
         title={title}
-        color={colorScheme === "dark" ? "#000582" : "#9fd5fa"}
+        // { backgroundColor: colorScheme === "dark" ? "#000582" : "#9fd5fa" },
+        color={boxBackgroundColor}
         onPress={toggle}
       />
     </View>
@@ -77,18 +95,21 @@ const styles = StyleSheet.create({
     justifyContent: "center", // Выравнивание текста по центру
     alignItems: "center", // Горизонтальное выравнивание текста
     overflow: "hidden", // Обрезание содержимого за пределами элемента
+    flexGrow: 1, // Разрешить блоку расти по высоте
     borderWidth: 0, // Граница для наглядности
     borderColor: "#ccc", // Цвет границы
     padding: 0, // Внутренние отступы
-    borderRadius: "50%", // Закругление краёв
-    // borderTopLeftRadius: "10%", // Закругление краёв
-    // borderTopRightRadius: "10%", // Закругление краёв
+    // borderRadius: "50%", // Закругление краёв
+    borderTopLeftRadius: "2%", // Закругление краёв
+    borderTopRightRadius: "2%", // Закругление краёв
+    borderBottomLeftRadius: "2%", // Левый нижний уголок
+    borderBottomRightRadius: "2%", // Правый нижний уголок
   },
   text: {
     fontSize: 16, // Размер текста
     // color: "#333", // Цвет текста
     textAlign: "center", // Выравнивание текста по центру
-    textShadowColor: "#FFB300", // Цвет тени (например, amber-6)
+    textShadowColor: "#eeefff", // Цвет тени (например, amber-6)
     textShadowOffset: { width: 0, height: 0 }, // Смещение тени
     textShadowRadius: 20, // Радиус размытия тени
   },
