@@ -15,7 +15,7 @@ function PlatformText({ children }) {
         {Platform.select({
           ios: "iOS",
           android: "Android",
-          web: "Web",
+          web: "Браузерную",
         })}
       </ThemedText>
     </ThemedText>
@@ -53,7 +53,6 @@ export default function HomeScreen() {
         <ThemedText>Текущая тема: {colorScheme} </ThemedText>
         <ThemedText type="subtitle">-----------------------------</ThemedText>
         <ThemedText type="subtitle"></ThemedText>
-        <ThemedText type="subtitle">-----------------------------</ThemedText>
       </ThemedView>
     </ParallaxScrollView>
   );
