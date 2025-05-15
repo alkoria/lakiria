@@ -18,7 +18,9 @@ import { FontAwesome } from "@expo/vector-icons";
 export default function TabTwoScreen() {
   const [alignItems, setAlignItems] = useState("center"); // Начальное значение
   const colorScheme = useColorScheme(); // Текущая тема
-
+  const boxBackgroundColor =
+    colorScheme === "dark" ? "rgba(0, 5, 130,.4)" : "#9fd5fa";
+  const textColor = colorScheme === "dark" ? "#fff" : "#000";
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A3A1DC", dark: "#1D3D47" }}
@@ -45,8 +47,8 @@ export default function TabTwoScreen() {
         <FontAwesome.Button
           name="comment" // Имя иконки
           style={styles.neonText}
-          backgroundColor={colorScheme === "dark" ? "#fff" : "#000"}
-          color={colorScheme === "dark" ? "#000" : "#fff"}
+          backgroundColor={boxBackgroundColor}
+          color={textColor}
           onPress={() => router.push("/about")}
         >
           Обо мне
@@ -67,8 +69,8 @@ export default function TabTwoScreen() {
         <FontAwesome.Button
           name="comment" // Имя иконки
           style={styles.neonText}
-          backgroundColor={colorScheme === "dark" ? "#fff" : "#000"}
-          color={colorScheme === "dark" ? "#000" : "#fff"}
+          backgroundColor={boxBackgroundColor}
+          color={textColor}
           onPress={() => router.push("https://t.me/lakiria")}
         >
           Вступить в контакт
