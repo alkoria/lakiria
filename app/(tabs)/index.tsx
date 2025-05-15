@@ -59,17 +59,6 @@ export default function HomeScreen() {
         <ThemedText type="subtitle">-----------------------------</ThemedText>
 
         <View style={[styles.box]}>
-          {/* <Image
-            source={
-              colorScheme === "dark"
-                ? { uri: "https://i.postimg.cc/W17cwJxt/ctrlf5.png " }
-                : { uri: "https://i.postimg.cc/7Z2PSVk4/ctrlf5white.png " }
-            }
-            style={{ width: "100%", height: "100%" }}
-            onError={(error) =>
-              console.log("Ошибка загрузки изображения:", error.nativeEvent)
-            }
-          /> */}
           <Image
             source={
               colorScheme === "dark"
@@ -82,9 +71,6 @@ export default function HomeScreen() {
             }
           />
         </View>
-        <ThemedText>Для правильного отображения </ThemedText>
-        <ThemedText>моего интерфейса.</ThemedText>
-
         <ThemedText type="subtitle">-----------------------------</ThemedText>
         <ThemedText type="subtitle"></ThemedText>
       </ThemedView>
