@@ -6,7 +6,7 @@ import Animated, {
   withTiming,
   useAnimatedStyle,
 } from "react-native-reanimated";
-
+import AntDesign from "@expo/vector-icons/AntDesign";
 interface ExpandableBoxProps {
   title: string; // Текст на кнопке
   content: string; // Текст внутри элемента
@@ -54,12 +54,25 @@ const ExpandableBox = ({ title, content, screenWidth }: ExpandableBoxProps) => {
   return (
     <View style={styles.container}>
       {/* Кнопка для запуска анимации */}
-      <Button
+      {/* <Button
         title={title}
         // { backgroundColor: colorScheme === "dark" ? "#000582" : "#9fd5fa" },
         color={boxBackgroundColor}
         onPress={toggle}
-      />
+      /> */}
+
+{/* <AntDesign name="codesquare" size={24} color="black" /> */}
+      
+      {/* Кнопка для запуска анимации */}
+      <AntDesign.Button
+        name="paperclip" // Имя иконки
+        backgroundColor={boxBackgroundColor}
+        color={textColor}
+        onPress={toggle}
+      >
+        {title}
+      </AntDesign.Button>
+
       {/* Раскрывающийся элемент с текстом */}
       <Animated.View
         style={[
@@ -99,10 +112,10 @@ const styles = StyleSheet.create({
     borderColor: "#ccc", // Цвет границы
     padding: 0, // Внутренние отступы
     // borderRadius: "50%", // Закругление краёв
-    borderTopLeftRadius: "2%", // Закругление краёв
-    borderTopRightRadius: "2%", // Закругление краёв
-    borderBottomLeftRadius: "2%", // Левый нижний уголок
-    borderBottomRightRadius: "2%", // Правый нижний уголок
+    borderTopLeftRadius: "10%", // Закругление краёв
+    borderTopRightRadius: "10%", // Закругление краёв
+    borderBottomLeftRadius: "10%", // Левый нижний уголок
+    borderBottomRightRadius: "10%", // Правый нижний уголок
   },
   text: {
     fontSize: 16, // Размер текста
