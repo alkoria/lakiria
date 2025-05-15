@@ -15,6 +15,7 @@ import { useColorScheme } from "@/hooks/useColorScheme";
 import { router } from "expo-router";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { FontAwesome } from "@expo/vector-icons";
+import AntDesign from "@expo/vector-icons/AntDesign";
 export default function TabTwoScreen() {
   const [alignItems, setAlignItems] = useState("center"); // Начальное значение
   const colorScheme = useColorScheme(); // Текущая тема
@@ -44,7 +45,7 @@ export default function TabTwoScreen() {
       </View>
 
       <View style={[styles.centerContainer]}>
-        <FontAwesome.Button
+        {/* <FontAwesome.Button
           name="comment" // Имя иконки
           style={styles.neonText}
           backgroundColor={boxBackgroundColor}
@@ -52,7 +53,28 @@ export default function TabTwoScreen() {
           onPress={() => router.push("/about")}
         >
           Обо мне
-        </FontAwesome.Button>
+        </FontAwesome.Button> */}
+
+        {/* <AntDesign name="paperclip" size={24} color="black" />
+        <AntDesign.Button
+          name="comment" // Имя иконки
+          style={styles.neonText}
+          backgroundColor={boxBackgroundColor}
+          color={textColor}
+          onPress={() => router.push("/about")}
+        >
+          Обо мне
+        </AntDesign.Button> */}
+        
+        <AntDesign.Button
+          name="paperclip" // Имя иконки
+          style={styles.neonText}
+          backgroundColor={boxBackgroundColor}
+          color={textColor}
+          onPress={() => router.push("/about")}
+        >
+          Обо мне
+        </AntDesign.Button>
 
         {/* <TouchableOpacity
         onPress={() => router.push("/about")} // Переход на экран os/linux
