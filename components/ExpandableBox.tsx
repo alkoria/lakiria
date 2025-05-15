@@ -53,6 +53,13 @@ const ExpandableBox = ({ title, content, screenWidth }: ExpandableBoxProps) => {
   const textColor = colorScheme === "dark" ? "#fff" : "#000";
   return (
     <View style={styles.container}>
+      {/* Кнопка для запуска анимации */}
+      <Button
+        title={title}
+        // { backgroundColor: colorScheme === "dark" ? "#000582" : "#9fd5fa" },
+        color={boxBackgroundColor}
+        onPress={toggle}
+      />
       {/* Раскрывающийся элемент с текстом */}
       <Animated.View
         style={[
@@ -72,14 +79,6 @@ const ExpandableBox = ({ title, content, screenWidth }: ExpandableBoxProps) => {
           <Text style={[styles.text, { color: textColor }]}>{content}</Text>
         </ScrollView>
       </Animated.View>
-
-      {/* Кнопка для запуска анимации */}
-      <Button
-        title={title}
-        // { backgroundColor: colorScheme === "dark" ? "#000582" : "#9fd5fa" },
-        color={boxBackgroundColor}
-        onPress={toggle}
-      />
     </View>
   );
 };
