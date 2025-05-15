@@ -15,7 +15,7 @@ function PlatformText({ children }) {
         {Platform.select({
           ios: "iOS",
           android: "Android",
-          web: "Браузерную",
+          web: "браузер",
         })}
       </ThemedText>
     </ThemedText>
@@ -24,6 +24,7 @@ function PlatformText({ children }) {
 
 export default function HomeScreen() {
   const colorScheme = useColorScheme();
+  const t = colorScheme === "dark" ? "тёмную" : "светлую";
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A3A1DC", dark: "#1D3D47" }}
@@ -48,9 +49,10 @@ export default function HomeScreen() {
         <ThemedText type="subtitle">-----------------------------</ThemedText>
         <HelloWave />
         <ThemedText type="subtitle">-----------------------------</ThemedText>
-        <PlatformText>Вы используете версию</PlatformText>
+        <PlatformText>Вход через </PlatformText>
         <ThemedText type="subtitle">-----------------------------</ThemedText>
-        <ThemedText>Текущая тема: {colorScheme} </ThemedText>
+        {/* <ThemedText>Текущая тема: {colorScheme} </ThemedText> */}
+        <ThemedText>Используем {t} тему</ThemedText>
         <ThemedText type="subtitle">-----------------------------</ThemedText>
         <ThemedText type="subtitle"></ThemedText>
       </ThemedView>
