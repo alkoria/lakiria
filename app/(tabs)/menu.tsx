@@ -109,12 +109,35 @@ const AlignItemsLayout = () => {
               }
             />
           </TouchableOpacity>
+
           {/* <img
             src="https://i.postimg.cc/W4Ly3mJW/Screenshot-20250326-005541-edit-105555122953163.jpg"
             alt="Screenshot-20250326-005541-edit-105555122953163"
           /> */}
         </View>
-
+        <View
+          style={[
+            styles.box,
+            {
+              backgroundColor: colorScheme === "dark" ? "#000582" : "#eceff8",
+            },
+          ]}
+        >
+          <TouchableOpacity
+            onPress={() => router.push("/menu")} // Переход на экран os/linux
+            style={{ width: "100%", height: "100%" }}
+          >
+            <Image
+              source={{
+                uri: `https://i.postimg.cc/KcLDCcbf/ssh.png`,
+              }}
+              style={{ width: "100%", height: "100%" }}
+              onError={(error) =>
+                console.log("Ошибка загрузки изображения:", error.nativeEvent)
+              }
+            />
+          </TouchableOpacity>
+        </View>
         {/* <View
           style={[
             styles.box,
