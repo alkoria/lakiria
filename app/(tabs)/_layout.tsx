@@ -71,9 +71,9 @@ export default function TabLayout() {
         options={{
           href: null,
           title: "Обо мне",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={20} name="bars" color={color} />
-          ),
+          // tabBarIcon: ({ color }) => (
+          //   <IconSymbol size={20} name="bars" color={color} />
+          // ),
         }}
       />
 
