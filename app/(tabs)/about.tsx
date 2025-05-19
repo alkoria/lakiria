@@ -1,5 +1,12 @@
 import React from "react";
-import { View, Dimensions, Image, StyleSheet, ScrollView } from "react-native";
+import {
+  View,
+  Dimensions,
+  Image,
+  StyleSheet,
+  ScrollView,
+  Text,
+} from "react-native";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import ExpandableBox from "@/components/ExpandableBox"; // Импортируем реиспользуемый компонент
@@ -43,6 +50,7 @@ export default function About() {
       }
     >
       {/* Рендерим все кнопки */}
+
       {skillsData.map((item, index) => (
         <ExpandableBox
           key={index}
@@ -51,6 +59,7 @@ export default function About() {
           screenWidth={screenWidth}
         />
       ))}
+
       {/* {items.map((item, index) => (
         <ExpandableBox
           key={index}
