@@ -90,6 +90,7 @@ const ExpandableBox = ({ title, content, screenWidth }: ExpandableBoxProps) => {
           showsHorizontalScrollIndicator={false} // Скрывает горизонтальный ползунок
         >
           <Text style={[styles.text, { color: textColor }]}>{content}</Text>
+       
         </ScrollView>
       </Animated.View>
     </View>
