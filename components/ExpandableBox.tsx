@@ -1,6 +1,6 @@
 import { useColorScheme } from "@/hooks/useColorScheme";
-import React from "react";
-import { View, Button, Text, StyleSheet, ScrollView } from "react-native";
+import React, { useState } from "react";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import Animated, {
   useSharedValue,
   withTiming,
@@ -13,37 +13,39 @@ interface ExpandableBoxProps {
   screenWidth: number; // Ширина экрана
 }
 
-const ExpandableBox = ({ title, content, screenWidth }: ExpandableBoxProps) => {
+const ExpandableBox = ({
+  title,
+  content,
+  screenWidth,
+  id,
+}: ExpandableBoxProps) => {
   const widthAnimation = useSharedValue(0); // Начальная ширина
   const heightAnimation = useSharedValue(0); // Начальная высота
   const isExpanded = useSharedValue(false); // Состояние расширения
 
-  // const ExpandableBox = ({ title, content, screenWidth }) => {
-  //   return (
-  //     <View style={styles.container}>
-  //       <Text style={styles.title}>{title}</Text>
-  //       {/* Добавляем ScrollView для содержимого */}
-  //       <ScrollView style={styles.scrollView}>
-  //         <Text style={styles.content}>{content}</Text>
-  //       </ScrollView>
-  //     </View>
-  //   );
-  // };
-
+  const [contentHeights, setContentHeights] = useState({}); // Храним высоты блоков
+  const handleLayout = (event) => {
+    const { height } = event.nativeEvent.layout;
+    setContentHeights((prevHeights) => ({
+      ...prevHeights,
+      [id]: height, // Сохраняем высоту для конкретного блока
+    }));
+  };
   const toggle = () => {
     if (isExpanded.value) {
-      widthAnimation.value = 0; // Минимальная ширина
+      widthAnimation.value = 400; // Минимальная ширина
       heightAnimation.value = 0; // Минимальная высота
     } else {
       widthAnimation.value = screenWidth - 40; // Максимальная ширина с отступами
-      heightAnimation.value = 400; // Максимальная высота
+      // heightAnimation.value = 400; // Максимальная высота
+      heightAnimation.value = contentHeights[id] || 0;
     }
     isExpanded.value = !isExpanded.value; // Переключаем состояние
   };
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
-      width: withTiming(widthAnimation.value, { duration: 800 }), // Анимация ширины
+      // width: withTiming(widthAnimation.value, { duration: 800 }), // Анимация ширины
       height: withTiming(heightAnimation.value, { duration: 800 }), // Анимация высоты
     };
   });
@@ -61,8 +63,8 @@ const ExpandableBox = ({ title, content, screenWidth }: ExpandableBoxProps) => {
         onPress={toggle}
       /> */}
 
-{/* <AntDesign name="codesquare" size={24} color="black" /> */}
-      
+      {/* <AntDesign name="codesquare" size={24} color="black" /> */}
+
       {/* Кнопка для запуска анимации */}
       <AntDesign.Button
         name="paperclip" // Имя иконки
@@ -84,13 +86,16 @@ const ExpandableBox = ({ title, content, screenWidth }: ExpandableBoxProps) => {
           },
         ]}
       >
-        {" "}
         <ScrollView
           showsVerticalScrollIndicator={false} // Скрывает вертикальный ползунок
           showsHorizontalScrollIndicator={false} // Скрывает горизонтальный ползунок
         >
-          <Text style={[styles.text, { color: textColor }]}>{content}</Text>
-       
+          <Text
+            onLayout={handleLayout}
+            style={[styles.text, { color: textColor }]}
+          >
+            {content}
+          </Text>
         </ScrollView>
       </Animated.View>
     </View>
@@ -113,10 +118,10 @@ const styles = StyleSheet.create({
     borderColor: "#ccc", // Цвет границы
     padding: 0, // Внутренние отступы
     // borderRadius: "50%", // Закругление краёв
-    borderTopLeftRadius: "10%", // Закругление краёв
-    borderTopRightRadius: "10%", // Закругление краёв
-    borderBottomLeftRadius: "10%", // Левый нижний уголок
-    borderBottomRightRadius: "10%", // Правый нижний уголок
+    // borderTopLeftRadius: "10%", // Закругление краёв
+    // borderTopRightRadius: "10%", // Закругление краёв
+    // borderBottomLeftRadius: "10%", // Левый нижний уголок
+    // borderBottomRightRadius: "10%", // Правый нижний уголок
   },
   text: {
     fontSize: 16, // Размер текста
