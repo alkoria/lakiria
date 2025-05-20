@@ -4,6 +4,8 @@ import {
   Platform,
   TouchableOpacity,
   View,
+  SafeAreaView,
+  ScrollView,
 } from "react-native";
 import React, { useState } from "react";
 import { Collapsible } from "@/components/Collapsible";
@@ -16,6 +18,7 @@ import { router } from "expo-router";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { FontAwesome } from "@expo/vector-icons";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 export default function TabTwoScreen() {
   const [alignItems, setAlignItems] = useState("center"); // Начальное значение
   const colorScheme = useColorScheme(); // Текущая тема
@@ -65,7 +68,7 @@ export default function TabTwoScreen() {
         >
           Обо мне
         </AntDesign.Button> */}
-        
+
         <AntDesign.Button
           name="paperclip" // Имя иконки
           style={styles.neonText}
