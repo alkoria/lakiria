@@ -69,7 +69,7 @@ export default function TabTwoScreen() {
           Обо мне
         </AntDesign.Button> */}
 
-        <AntDesign.Button
+        {/* <AntDesign.Button
           name="paperclip" // Имя иконки
           style={styles.neonText}
           backgroundColor={boxBackgroundColor}
@@ -77,7 +77,7 @@ export default function TabTwoScreen() {
           onPress={() => router.push("/about")}
         >
           Обо мне
-        </AntDesign.Button>
+        </AntDesign.Button> */}
 
         {/* <TouchableOpacity
         onPress={() => router.push("/about")} // Переход на экран os/linux
